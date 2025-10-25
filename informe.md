@@ -68,11 +68,29 @@ Paso 4. Detener y eliminar el contenedor:
 Paso 5. Conectarse desde TablePlus o pgAdmin con los parámetros:
 ![alt text](<Captura de pantalla 2025-10-23 145428.png>)
 ![alt text](<Captura de pantalla 2025-10-23 145406.png>)
+Parte 2: Base de datos con volumen
 
+Paso 1. Crear un volumen llamado pgdata:
+![alt text](<Parte 2 — Base de datos con volumen (los datos persisten).png>)
+Paso 2. Crear el contenedor PostgreSQL con volumen:
+![alt text](<Crear el contenedor server_db2 montando el volumen (usamos puerto 5433 en host para evitar choque).png>)
+Paso 4. Detener y eliminar el contenedor:
+Paso 5. Volver a crear el contenedor con el mismo volumen:
+![alt text](<Captura de pantalla 2025-10-25 083741.png>)
 ## 9. Resultados esperados:
     
-Descripcion de los resultados, capturas de pantallas del resultado final de la practica
+En la Parte 1, al eliminar el contenedor, la base de datos test desaparece.
+
+En la Parte 2, al usar el volumen pgdata, los datos permanecen tras eliminar y recrear el contenedor.
+
+Se comprueba el uso de volúmenes para garantizar persistencia de datos en entornos Docker.
 
 ## 10. Bibliografía
     
-- Apellido,..... En apa
+Docker Inc. (2024). Docker Documentation. Recuperado de https://docs.docker.com
+
+PostgreSQL Global Development Group. (2024). PostgreSQL Documentation. Recuperado de https://www.postgresql.org/docs/
+
+PhoenixNAP. (2021). How to Use Docker Volumes. Recuperado de https://phoenixnap.com/kb/docker-volumes
+
+Cyberciti.biz. (2021). Docker persistent data storage tutorial.
